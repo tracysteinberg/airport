@@ -24,9 +24,19 @@ the_beatles_flight = Flight.new( { 'number' => 4, 'destination' => 'Paris', 'pas
 
 # bob_dylan.update( { 'name' => 'Bob Dylan' } )
 # dylan_flight.update( { 'destination' => 'Minnesota' } )
+
 # all_names = Passenger.list(name)
-# all_numbers = Flight.list(number)
-# all_destinations = Flight.list(destination)
+# all_numbers = Flight.new(number)
+all_cities = Flight.new({'cities'=>'Stockholm','cities2'=>'Tokyo'})
+
+# p cities['Europe']
+# p cities['Asia']
+
+# p cities['Europe']['Sweden']
+# p cities['Asia']['Japan']
+
+# Flight.new( {  cities='los_angeles' =>'', 'lost' =>'', 
+  # 'paris'=>'', 'london' =>'', 'new_york' =>'' })
 
 rod_stewart = Passenger.new( { 'name' => 'Rod Stewart' } )
 # rod_stewart.save()
