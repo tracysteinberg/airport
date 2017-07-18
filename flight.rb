@@ -1,10 +1,11 @@
 class Flight
 
-  attr_reader :number, :destination
+  attr_reader :number, :destination, :passenger
 
-  def initialize(number, destination)
-    @number = number
-    @destination = destination
+  def initialize(options)
+    @number = options['number']
+    @destination = options['destination']
+    @passenger= options['passenger']
 
   end
 
