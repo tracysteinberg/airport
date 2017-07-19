@@ -1,13 +1,21 @@
 class Flight
 
-  attr_reader :number, :destination, :passenger, :cities, :cites2
+  attr_reader :number, :destination, :passengers
 
-  def initialize(options)
-    @number = options['number']
-    @destination = options['destination']
-    @passenger= options['passenger'] 
-    @cities=options['cities']
-    @cities2=options['cities2'] 
+  def initialize(number,destination,passengers)
+    @number = number.to_i
+    @destination = destination
+    @passengers = passengers 
+  end
+
+  def flight_has_passenger
+    return @passengers.length
+
+  end
+
+
+    # @cities=options['cities']
+    # @cities2=options['cities2'] 
 
 
     # @los_angeles = options['Los Angeles']
@@ -17,14 +25,14 @@ class Flight
     # @new_york = options['New York']
     # @all_cities= @los_angeles, @paris, @london, @lost, @new_york
   
-  end
+  
 
-  require 'set'
+  # require 'set'
 
-  cities = Hash.new()
-  cities2 = Hash.new()
-  cities['Stockholm'] = Hash.new(Set.new)
-  cities2['Tokyo'] = Hash.new(Set.new)
+  # cities = Hash.new()
+  # cities2 = Hash.new()
+  # cities['Stockholm'] = Hash.new(Set.new)
+  # cities2['Tokyo'] = Hash.new(Set.new)
 
   # cities['Europe']['Sweden'].add "Stockholm"
   # cities['Europe']['Sweden'].add "Gothenburg"

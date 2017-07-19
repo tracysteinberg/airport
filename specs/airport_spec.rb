@@ -9,19 +9,21 @@ require_relative('../passenger')
 class AirportTest < Minitest::Test
 
   def setup 
-    @flight1 = Flight.new(65, "NYC")
-    @flight2 = Flight.new(23, "Dublin")
-    @flight3 = Flight.new(17, "Aberdeen")
-    @flight4 = Flight.new(34, "LHR")
+    @flight1 = Flight.new(65, "New York", '')
+    @flight2 = Flight.new(23, "Dublin", '')
+    @flight3 = Flight.new(17, "Aberdeen", '')
+    @flight4 = Flight.new(34, "LHR", '')
 
     @flights = [@flight1, @flight2, @flight3]
 
-    @airport = Airport.new("Edinburgh", @flights, @passenger)
+    
     @passenger1 = Passenger.new("David")
     @passenger2 = Passenger.new("Pooh")
     @passenger3 = Passenger.new("Max")
 
-    @passenger = [@passenger1, @passenger2, @passenger3]
+    @passengers = [@passenger1, @passenger2, @passenger3]
+
+    @airport = Airport.new("Edinburgh", @flights, @passengers)
   end
 
   def test_airport_has_name
@@ -38,7 +40,7 @@ class AirportTest < Minitest::Test
   end  
 
   def test_can_check_in_multiple_passengers
-    @airport.check_in_multiple_passengers(@passenger)
+    @airport.check_in_multiple_passengers(@passengers)
     assert_equal(3, @airport.number_of_passengers())
   end
 
