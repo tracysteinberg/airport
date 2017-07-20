@@ -21,7 +21,7 @@ dylan_flight = Flight.new('25', 'Lost',  'Bob Dylan' )
 the_beatles_flight = Flight.new( '4', 'Paris', 'The Beatles'  )
 # the_beatles.save()
 
-number_of_flights = 
+# number_of_flights = 
 
 
 
